@@ -9,6 +9,13 @@
         <script src="scripts/lib/everlive.all.min.js"></script>
         <script src="scripts/app/identity-provider.js"></script>
         <script src="scripts/app/main.js" type="text/javascript"></script>
+        <script src="scripts/app/user-model.js" type="text/javascript"></script>
+        <script src="scripts/app/activities-model.js" type="text/javascript"></script>
+        <script src="scripts/app/activities-view-model.js" type="text/javascript"></script>
+        <script src="scripts/app/activity-view-model.js" type="text/javascript"></script>
+        <script src="scripts/app/login-view-model.js" type="text/javascript"></script>
+        <script src="scripts/app/singup-view-model.js" type="text/javascript"></script>
+        <script src="scripts/app/add-activity-view-model.js" type="text/javascript"></script>
 
         <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
         <link href="styles/main.css" rel="stylesheet" />
@@ -18,8 +25,8 @@
             <!--View content will render here-->
         </section>
         <!--WELCOME VIEW -->
-        <div data-role="view" id="welcome" data-layout="default" class="welcome-scrn form-view" data-model="app.viewModels.login">
-            <h1><b>Everlive</b> sample application</h1>
+        <div data-role="view" id="welcome" data-layout="default" class="welcome-scrn form-view" data-model="loginViewModel">
+            <h1><b>Learn Point</b>HackFMI</h1>
             <form id="login-form">
                 <ul data-role="listview" data-style="inset">
                     <li><label for="loginUsername">Username</label> <input type="text" id="loginUsername" required validationMessage="Username is required!" /></li>
