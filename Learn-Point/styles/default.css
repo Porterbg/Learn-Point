@@ -1,0 +1,63 @@
+﻿#status-container {
+    background-color: white;
+}
+
+#map-canvas {
+    min-height: 300px;
+    width: 99%;
+    margin: auto;
+}
+
+.user-share {
+    padding: 10px !important;
+}
+
+.set-position-button {
+    width: 91%;
+}
+
+#datetimepickerHolder {
+    margin-top:20px;
+}
+
+#datetimepickerHolder .k-datetimepicker {
+    width: 100%;
+    border: 1px solid #929292;
+}
+
+#datetimepickerHolder .k-select {
+    width: 110px;
+}
+
+#datetimepickerHolder .k-i-calendar {
+    background-image: url('Default/calendar.png');
+    background-position: center;
+}
+
+#datetimepickerHolder .k-i-clock {
+    background-image: url('Default/time.png');
+    background-position: center;
+}
+
+#datetimepickerHolder .k-select .k-icon {
+    width: 55px;
+    height: 100%;
+    margin: 0;
+}
+
+#datetimepickerHolder .k-picker-wrap {
+    padding-right: 7.5em;
+}
+.user-share table td:first-child {
+    width:45px;
+    text-align:right;
+}
+.user-info h2 {
+
+}
+.user-info span {
+   float:right;
+}
+#status-container .user-info span{
+    margin-right:15px;
+}

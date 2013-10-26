@@ -116,6 +116,10 @@
     <Content Include="scripts\lib\everlive.all.min.js">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="styles\default.css" />
+    <Content Include="styles\Default\calendar.png" />
+    <Content Include="styles\Default\sprite.png" />
+    <Content Include="styles\Default\time.png" />
     <Content Include="styles\images\app-bg.jpg">
       <SubType>Content</SubType>
     </Content>
@@ -140,6 +144,9 @@
     <Content Include="views\addActivityView.html">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="views\setPositionView.html">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="views\signupView.html">
       <SubType>Content</SubType>
     </Content>
@@ -161,6 +168,7 @@
     <Folder Include="scripts\app\" />
     <Folder Include="scripts\lib\" />
     <Folder Include="styles\" />
+    <Folder Include="styles\Default\" />
     <Folder Include="styles\images\" />
     <Folder Include="views\" />
   </ItemGroup>

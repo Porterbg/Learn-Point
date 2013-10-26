@@ -1,4 +1,4 @@
-<div data-role="view" id="view-all-activities" data-layout="default" class="activities-view" data-model="activitiesViewModel">
+<div data-role="view" id="view-all-activities"  data-layout="default" class="activities-view" data-model="activitiesViewModel">
     <header data-role="header">
         <div data-role="navbar">
             Activities
@@ -6,6 +6,8 @@
             <a class="nav-button" data-align="right" data-role="button" data-icon="add" href="views/addActivityView.html"></a>
         </div>
     </header>
+  
+
 
     <ul id="activities-listview" data-style="inset" data-role="listview" data-template="activityTemplate"
         data-bind="source: activities"></ul>
@@ -18,12 +20,29 @@
 <script type="text/x-kendo-template" id="activityTemplate">
     <div data-role="touch" data-bind="events: { tap: activitySelected }">
         <div class="user-info">
-            <h2>${User().DisplayName}</h2>
-            <time class="timeSpan">${ScheduleDatetFormatted()}</time>
+          <h2>${User().DisplayName}</h2>
+          <time class="timeSpan">${ScheduleDatetFormatted()}</time>
+          <span>10/6</span>
         </div>
         <div class="user-share">
-            <a class="user-share-txt">${Address}</a>
-            <a class="user-share-txt">${Text}</a>
+          <table>
+            <tr>
+              <td>
+                <h4>Address:</h4>
+              </td> 
+              <td>
+                <a class="user-share-txt">${Address}</a>
+              </td> 
+            </tr>
+            <tr>
+              <td>
+                <h4>Subject:</h4>
+              </td> 
+              <td>
+               <a class="user-share-txt">${Text}</a>
+              </td> 
+            </tr>
+          </table>
         </div>
     </div>
 </script>

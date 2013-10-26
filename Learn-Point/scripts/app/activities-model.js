@@ -79,7 +79,11 @@ var activitiesModel = (function () {
                 $('#no-activities-span').show();
             }
         },
-        sort: { field: 'ScheduleDate', dir: 'desc' }
+        sort: { field: 'ScheduleDate', dir: 'desc' },
+        filterable: {
+                field: "Text",
+                operator: "startswith"
+        },
     });
     return {
         activities: activitiesDataSource

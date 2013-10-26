@@ -7,19 +7,22 @@
             <a class="nav-button" data-align="right" data-role="button" data-bind="click: saveActivity">Post</a>
         </div>
     </header>
-    
+
     <div id="enterStatus" class="share-form-wrp">
         <div class="user-info">
             <img data-bind="attr:{src: me.get('data').PictureUrl}" alt="styles/images/avatar.png" />
             <h2 data-bind="text: me.get('data').DisplayName">Me</h2>
         </div>
-        
+
         <div class="user-share">
-            <a class="nav-button" data-align="right" data-role="button" data-bind="click: setPosition">Set position</a>
-            <input id="datetimepicker" value="10/10/2011" style="width:200px;" />
-            <textarea id="newStatus" placeholder="What's on your mind?" required validationMessage="Comment text is required!"></textarea>
+            <a class="nav-button set-position-button" data-align="right" data-role="button" data-bind="click: setPosition">Set position</a>
+            <div id="datetimepickerHolder">
+                <input id="datetimepicker" value="10/10/2011" />
+            </div>
+
+            <textarea id="newStatus" placeholder="What's on your mind?" required validationmessage="Comment text is required!"></textarea>
             <div id="newCommentValidation" class="validation">Comment text is required!</div>
         </div>
     </div>
-    
+
 </div>
