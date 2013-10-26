@@ -10,9 +10,10 @@
         <div class="user-info">
             <img data-bind="attr:{src: User().PictureUrl}" alt="styles/images/avatar.png" />
             <h2 id="personName" data-bind='text: User().DisplayName'></h2>
-            <time id="activityDate" data-bind="text: CreatedAtFormatted"></time>
+            <time id="activityDate" data-bind="text: ScheduleDatetFormatted"></time>
         </div>
-        <img id="picture" data-bind="attr:{src: PictureUrl()}" width="100%"/>
+        <!--<img id="picture" data-bind="attr:{src: PictureUrl()}" width="100%"/>-->
+        <div id="map-canvas" style="width:90%; height:300px; margin:auto;"></div>
         <div class="user-share">
             <span id="activityText" data-bind="text: Text" class="user-share-txt"></span>
         </div>

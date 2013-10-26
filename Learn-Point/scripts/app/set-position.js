@@ -19,19 +19,29 @@ var setPositionViewModel = (function () {
     };
     
     var setPosition = function () {
-        var pos = new google.maps.LatLng(lat, lon); 
-        addActivityViewModel.addPosition(pos);
-        app.mobileApp.navigate('#:back');
-    };
+            geocoder = new google.maps.Geocoder();
+            var latlng = new google.maps.LatLng(lat, lon);
+            geocoder.geocode({'latLng': latlng}, function(results, status) {
+              if (status == google.maps.GeocoderStatus.OK) {
+                if (results[0]) {
+                  addActivityViewModel.addPosition(results[0].formatted_address, latlng);
+                }
+              } else {
+                alert("Geocoder failed due to: " + status);
+              }
+            });
+            
+            app.mobileApp.navigate('#:back');
+        };
     
     function generateMap() {
         directionsDisplay = new google.maps.DirectionsRenderer();
         var position = new google.maps.LatLng(lat, lon);
         var mapOptions = {
-            zoom:7,
+            zoom:10,
             mapTypeId: google.maps.MapTypeId.ROADMAP,
             center: position
-        }
+        };
         
         map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
         directionsDisplay.setMap(map);
@@ -43,6 +53,7 @@ var setPositionViewModel = (function () {
         google.maps.event.addListener(marker,'dragend',function(overlay,point){
             lat = marker.position.lat();
             lon = marker.position.lng();
+            generateMap();
         });
     };
     return {

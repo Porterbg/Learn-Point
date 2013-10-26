@@ -21,10 +21,29 @@ var activitiesModel = (function () {
             Likes: {
                 field: 'Likes',
                 defaultValue: []
+            },
+            Address: {
+                field: 'Address',
+                defaultValue: ''
+            },
+            Location: {
+                field: 'Location',
+                defaultValue: ''
+            },
+            ScheduleDate: {
+                field: 'ScheduleDate',
+                defaultValue: new Date()
+            },
+            JoinedUsers: {
+                field: 'JoinedUsers',
+                defaultValue: []
             }
         },
         CreatedAtFormatted: function () {
             return app.AppHelper.formatDate(this.get('CreatedAt'));
+        },
+        ScheduleDatetFormatted: function () {
+            return app.AppHelper.formatDate(this.get('ScheduleDate'));
         },
         PictureUrl: function () {
             return app.AppHelper.resolvePictureUrl(this.get('Picture'));
