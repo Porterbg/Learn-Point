@@ -1,0 +1,14 @@
+<div data-role="view" data-title="Map" 
+    data-model="setPositionViewModel" 
+    data-init="setPositionViewModel.init">
+    <header data-role="header">
+        <div data-role="navbar">
+            Set position
+            <a class="nav-button" data-align="left" data-role="backbutton">Cancel</a>
+            <a class="nav-button" data-align="right" data-role="button" data-bind="click: setPosition">Set Route</a>
+        </div>
+    </header>
+    <div id="enterRoute" class="share-form-wrp">
+        <div id="map-canvas" style="width:90%; height:300px; margin:auto;"></div>
+    </div>
+</div>
