@@ -18,7 +18,7 @@
 #friendsApp.km-ios, #friendsApp.km-ios .km-content, #friendsApp.km-android, #friendsApp.km-android .km-content
 {
     background-image: url(images/app-bg.jpg);
-    background-repeat: no-repeat;
+    background-repeat: repeat-x;
     background-size: cover;
     background-color: #4b2113;
 }

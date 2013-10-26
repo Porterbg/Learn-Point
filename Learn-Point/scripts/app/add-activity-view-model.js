@@ -20,6 +20,25 @@ var addActivityViewModel = (function () {
             });
             activities.sync();
         }
+
+        $.oajax({
+            type: "POST",
+            url: "https://graph.facebook.com/me/feed",
+        
+            dataType: 'json',
+            data: {
+                message: "WOW with my Icenium mobile application I can post to my Facebook wall!",
+                link: "http://icenium.com/?utm_source=facebook&utm_medium=post&utm_campaign=sampleapp",
+                picture: "http://www.icenium.com/iceniumImages/features-main-images/how-it-works.png"
+            },
+            success: function (data) {
+                outputlog("Post response (facebook):");
+                outputlog(data);
+            },
+            error: function (e) {
+                outputlog(e);
+            }
+        });
     };
     
     var setPosition = function() {

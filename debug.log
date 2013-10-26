@@ -1,2 +1,14 @@
 [1025/231642:WARNING:resource_bundle.cc(303)] locale_file_path.empty()
 [1025/231744:WARNING:resource_bundle.cc(303)] locale_file_path.empty()
+[1026/011309:WARNING:resource_bundle.cc(303)] locale_file_path.empty()
+[1026/012242:WARNING:resource_bundle.cc(303)] locale_file_path.empty()
+[1026/015704:WARNING:resource_bundle.cc(303)] locale_file_path.empty()
+[1026/015804:WARNING:resource_bundle.cc(303)] locale_file_path.empty()
+[1026/042026:ERROR:cef_context.cc(458)] No localized string available for id 18010
+[1026/042026:ERROR:cef_context.cc(458)] No localized string available for id 18012
+[1026/042026:ERROR:cef_context.cc(458)] No localized string available for id 18012
+[1026/042026:ERROR:cef_context.cc(458)] No localized string available for id 18012
+[1026/042028:ERROR:cef_context.cc(458)] No localized string available for id 18012
+[1026/042028:ERROR:cef_context.cc(458)] No localized string available for id 18010
+[1026/042028:ERROR:cef_context.cc(458)] No localized string available for id 18012
+[1026/050032:WARNING:resource_bundle.cc(303)] locale_file_path.empty()

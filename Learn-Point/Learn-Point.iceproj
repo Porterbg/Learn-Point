@@ -86,10 +86,31 @@
     <Content Include="kendo\styles\kendo.mobile.all.min.css">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="scripts\app\activities-model.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\app\activities-view-model.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\app\activity-view-model.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\app\add-activity-view-model.js">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="scripts\app\identity-provider.js">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="scripts\app\login-view-model.js">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="scripts\app\main.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\app\singup-view-model.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="scripts\app\user-model.js">
       <SubType>Content</SubType>
     </Content>
     <Content Include="scripts\lib\everlive.all.min.js">
