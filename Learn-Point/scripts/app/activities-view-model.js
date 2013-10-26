@@ -13,9 +13,13 @@ var activitiesViewModel = (function () {
             navigateHome();
         });
     };
+    var joinActivity = function() {
+        console.log("Here");
+    };
     return {
         activities: activitiesModel.activities,
         activitySelected: activitySelected,
-        logout: logout
+        logout: logout,
+        join: joinActivity
     };
 }());

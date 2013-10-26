@@ -79,7 +79,7 @@ var activitiesModel = (function () {
                 $('#no-activities-span').show();
             }
         },
-        sort: { field: 'CreatedAt', dir: 'desc' }
+        sort: { field: 'ScheduleDate', dir: 'desc' }
     });
     return {
         activities: activitiesDataSource

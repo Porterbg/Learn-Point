@@ -1,7 +1,10 @@
 var activityViewModel = (function () {
-    function generateMap(location) {
+    var activity;
+    function generateMap() {
         directionsDisplay = new google.maps.DirectionsRenderer();
-        var position = new google.maps.LatLng(location.latitude, location.longitude);
+        var lat = activity.Location.latitude || 40;
+        var lon = activity.Location.longitude || -80;
+        var position = new google.maps.LatLng(lat, lon);
         var mapOptions = {
             zoom:10,
             mapTypeId: google.maps.MapTypeId.ROADMAP,
@@ -16,12 +19,18 @@ var activityViewModel = (function () {
         directionsDisplay.setMap(map);
     };
     
+    var show = function (e) {
+        activity = activitiesModel.activities.getByUid(e.view.params.uid);
+        kendo.bind(e.view.element, activity, kendo.mobile.ui);
+        generateMap();
+    };
+    
+    var joinActivity = function() {
+        console.log("Here");
+    };
+    
     return {
-        show: function (e) {
-            var activity = activitiesModel.activities.getByUid(e.view.params.uid);
-            kendo.bind(e.view.element, activity, kendo.mobile.ui);
-            generateMap(activity.Location);
-        }
-        
+        show: show,
+        join: joinActivity
     };
 }());
