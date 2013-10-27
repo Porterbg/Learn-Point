@@ -34,7 +34,14 @@ var activityViewModel = (function () {
     };
     
     var join = function() {
-        activity.JoinedUsers.push();
+        if(activity.JoinedUsers.indexOf(usersModel.currentUser.get('data').Id) < 0)
+        {
+            activity.JoinedUsers.push(usersModel.currentUser.get('data').Id);
+            console.log(activity.JoinedUsers);
+        } else {
+            app.showError('Already joined in this event!');
+        }
+        //console.log(usersModel.currentUser);
     };
     
     return {

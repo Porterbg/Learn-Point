@@ -53,12 +53,12 @@ var activitiesModel = (function () {
             var user = $.grep(usersModel.users(), function (e) {
                 return e.Id === userId;
             })[0];
-            return  {//user ?
+            return user ? {
                 DisplayName: user.DisplayName,
                 PictureUrl: app.AppHelper.resolveProfilePictureUrl(user.Picture)
-            /*} : {
+           } : {
                 DisplayName: 'Anonymous',
-                PictureUrl: app.AppHelper.resolveProfilePictureUrl()*/
+                PictureUrl: app.AppHelper.resolveProfilePictureUrl()
             };
         }
     };
@@ -79,15 +79,15 @@ var activitiesModel = (function () {
                 $('#no-activities-span').show();
             }
         },
-        sort: { field: 'ScheduleDate', dir: 'desc' },
-        filterable: {
+        sort: { field: 'ScheduleDate', dir: 'desc' }//,
+        /*filterable: {
                 field: "Text",
                 operator: "startswith"
         },
-        serverFiltering: true
+        serverFiltering: true*/
     });
     
-    $("#filterable-listview").kendoMobileListView({
+    /*$("#filterable-listview").kendoMobileListView({
         dataSource: activitiesDataSource,
         template: $("#mobile-listview-filtering-template").text(),
         filterable: {
@@ -95,7 +95,7 @@ var activitiesModel = (function () {
             operator: "startswith"
         },
         endlessScroll: true
-    });
+    });*/
     
     return {
         activities: activitiesDataSource
