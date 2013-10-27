@@ -43,7 +43,7 @@ var setPositionViewModel = (function () {
             center: position
         };
         
-        map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+        map = new google.maps.Map(document.getElementById('map-canvas-set'), mapOptions);
         directionsDisplay.setMap(map);
         var marker = new google.maps.Marker({    
             position: position, 
