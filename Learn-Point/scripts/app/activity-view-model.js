@@ -21,13 +21,20 @@ var activityViewModel = (function () {
     
     var show = function (e) {
         activity = activitiesModel.activities.getByUid(e.view.params.uid);
-        kendo.bind(e.view.element, activity, kendo.mobile.ui);
+        //kendo.bind(e.view.element, activity, kendo.mobile.ui);
+        var name = document.getElementById('personName');
+        name.innerText = activity.User().DisplayName;
+        var userAvatar = document.getElementById('user-avatar');
+        userAvatar.src = activity.User().PictureUrl;
+        var activityDate = document.getElementById('activityDate');
+        activityDate.innerText = activity.ScheduleDateFormatted();
+        var activityText = document.getElementById('activityText');
+        activityText.innerText = activity.Text;
         generateMap();
-        console.log(activity);
     };
     
     var join = function() {
-        console.log("Here");
+        activity.JoinedUsers.push();
     };
     
     return {

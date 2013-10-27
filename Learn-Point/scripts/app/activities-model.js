@@ -84,7 +84,19 @@ var activitiesModel = (function () {
                 field: "Text",
                 operator: "startswith"
         },
+        serverFiltering: true
     });
+    
+    $("#filterable-listview").kendoMobileListView({
+        dataSource: activitiesDataSource,
+        template: $("#mobile-listview-filtering-template").text(),
+        filterable: {
+            field: "Text",
+            operator: "startswith"
+        },
+        endlessScroll: true
+    });
+    
     return {
         activities: activitiesDataSource
     };

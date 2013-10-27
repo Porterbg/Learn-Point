@@ -13,6 +13,7 @@ var activitiesViewModel = (function () {
             navigateHome();
         });
     };
+    
     return {
         activities: activitiesModel.activities,
         activitySelected: activitySelected,

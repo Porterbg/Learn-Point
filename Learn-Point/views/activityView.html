@@ -10,9 +10,12 @@
 
     <div id="status-container" class="user-status-wrp" data-role="listview" data-style="inset">
         <div class="user-info">
-            <img data-bind="attr:{src: User.PictureUrl}" alt="styles/images/avatar.png" />
-            <h2 id="personName" data-bind="text: User.user.DisplayName"></h2>
-            <time id="activityDate" data-bind="text: ScheduleDateFormatted"></time>
+            <!--<img data-bind="attr:{src: activityViewModel.activity.User().PictureUrl}" alt="styles/images/avatar.png" />-->
+            <!--<h2 id="personName" data-bind="text: name"></h2>-->
+            <img id="user-avatar" alt="styles/images/avatar.png">
+            <h2 id="personName"></h2>
+            <!--<time id="activityDate" data-bind="text: activity.ScheduleDateFormatted"></time>-->
+            <time id="activityDate"></time>
             <span>10/6</span>
         </div>
         <!--<img id="picture" data-bind="attr:{src: PictureUrl()}" width="100%"/>-->
