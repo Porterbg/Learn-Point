@@ -23,14 +23,15 @@ var activityViewModel = (function () {
         activity = activitiesModel.activities.getByUid(e.view.params.uid);
         kendo.bind(e.view.element, activity, kendo.mobile.ui);
         generateMap();
+        console.log(activity);
     };
     
-    var joinActivity = function() {
+    var join = function() {
         console.log("Here");
     };
     
     return {
         show: show,
-        join: joinActivity
+        join: join
     };
 }());

@@ -1,4 +1,5 @@
-<div data-role="view" id="single-activity" data-layout="default" class="activities-view" data-show="activityViewModel.show">
+<div data-role="view" id="single-activity" data-layout="default" class="activities-view" data-show="activityViewModel.show"
+    data-model="activityViewModel">
     <header data-role="header">
         <div data-role="navbar">
             Activity
@@ -9,9 +10,9 @@
 
     <div id="status-container" class="user-status-wrp" data-role="listview" data-style="inset">
         <div class="user-info">
-            <img data-bind="attr:{src: User().PictureUrl}" alt="styles/images/avatar.png" />
-            <h2 id="personName" data-bind='text: User().DisplayName'></h2>
-            <time id="activityDate" data-bind="text: ScheduleDatetFormatted"></time>
+            <img data-bind="attr:{src: User.PictureUrl}" alt="styles/images/avatar.png" />
+            <h2 id="personName" data-bind="text: User.user.DisplayName"></h2>
+            <time id="activityDate" data-bind="text: ScheduleDateFormatted"></time>
             <span>10/6</span>
         </div>
         <!--<img id="picture" data-bind="attr:{src: PictureUrl()}" width="100%"/>-->

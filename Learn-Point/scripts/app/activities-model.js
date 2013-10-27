@@ -42,7 +42,7 @@ var activitiesModel = (function () {
         CreatedAtFormatted: function () {
             return app.AppHelper.formatDate(this.get('CreatedAt'));
         },
-        ScheduleDatetFormatted: function () {
+        ScheduleDateFormatted: function () {
             return app.AppHelper.formatDate(this.get('ScheduleDate'));
         },
         PictureUrl: function () {
@@ -53,12 +53,12 @@ var activitiesModel = (function () {
             var user = $.grep(usersModel.users(), function (e) {
                 return e.Id === userId;
             })[0];
-            return user ? {
+            return  {//user ?
                 DisplayName: user.DisplayName,
                 PictureUrl: app.AppHelper.resolveProfilePictureUrl(user.Picture)
-            } : {
+            /*} : {
                 DisplayName: 'Anonymous',
-                PictureUrl: app.AppHelper.resolveProfilePictureUrl()
+                PictureUrl: app.AppHelper.resolveProfilePictureUrl()*/
             };
         }
     };
